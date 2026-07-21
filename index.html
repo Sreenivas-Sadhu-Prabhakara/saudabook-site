@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SaudaBook — match scoring &amp; deal pipeline for property brokers</title>
+  <meta name="description" content="Score every buyer against every listing, schedule site visits and chase follow-ups from one deal book. Built for Indian real-estate brokers and property agents — book a discovery call." />
+  <meta name="keywords" content="real estate CRM India, property broker software, buyer listing matching, real estate lead management, site visit scheduling, follow-up reminders, property agent deal pipeline" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+  <link rel="canonical" href="https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/" />
+  <meta name="theme-color" content="#ca8a04" />
+  <meta name="author" content="KARYA" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="KARYA" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:title" content="SaudaBook — match scoring &amp; deal pipeline for property brokers" />
+  <meta property="og:description" content="Score every buyer against every listing, schedule site visits and chase follow-ups from one deal book. Built for Indian real-estate brokers and property agents — book a discovery call." />
+  <meta property="og:url" content="https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/" />
+  <meta property="og:image" content="https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SaudaBook — a deal book that scores buyers against listings and drives site visits and follow-ups for Indian property brokers." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SaudaBook — match scoring &amp; deal pipeline for property brokers" />
+  <meta name="twitter:description" content="Score every buyer against every listing, schedule site visits and chase follow-ups from one deal book. Built for Indian real-estate brokers and property agents — book a discovery call." />
+  <meta name="twitter:image" content="https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/og.png" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/og.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kaarya-bench.pages.dev/#org",
+        "name": "KARYA",
+        "url": "https://kaarya-bench.pages.dev/",
+        "email": "sreeni.nintendo@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/#website",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/",
+        "name": "SaudaBook",
+        "inLanguage": "en-IN",
+        "publisher": { "@id": "https://kaarya-bench.pages.dev/#org" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "SaudaBook",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/",
+        "image": "https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/og.png",
+        "description": "A deal book for Indian real-estate brokers — auto-scores every buyer's requirement against every listing on a 0–100 scale, surfaces hot matches, schedules site visits, and chases follow-ups with nudges across a leads-to-closed pipeline.",
+        "inLanguage": ["en-IN", "hi-IN"],
+        "areaServed": { "@type": "Country", "name": "India" },
+        "audience": { "@type": "BusinessAudience" },
+        "provider": { "@type": "Organization", "name": "KARYA" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "description": "Subscription — pricing shared on a discovery call"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the match score actually work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every buyer is scored against every available listing on a 0–100 scale: property type, budget fit, area or city, deal type and BHK each carry a weight, with budget the biggest lever. Each match shows its reasons — 'Within budget', 'In preferred area Whitefield', '3BHK exact' — and pairs scoring 70 or more surface as hot matches on your dashboard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it send the WhatsApp messages, or just remind me to?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SaudaBook drafts each visit confirmation and follow-up nudge — with the buyer's name, the address and the asking price — and stages it in your outbox. You send from your own number with a tap, so it always looks like it came from you. Re-running the nudge never double-sends the same message."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "I already have my listings in a notebook and WhatsApp. Is setup painful?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An evening. You add each listing once (type, area, city, BHK, size, price) and each buyer's requirement once. From then on the scoring, hot matches and pipeline are computed for you — you stop re-matching from memory every time a new flat comes in."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does it cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first brokers."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "KARYA · On the Bench",
+            "item": "https://kaarya-bench.pages.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "SaudaBook",
+            "item": "https://sreenivas-sadhu-prabhakara.github.io/saudabook-site/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="SaudaBook home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" role="img" aria-label="SaudaBook logo">
+            <rect x="3" y="4" width="26" height="24" rx="3" fill="#ca8a04"/>
+            <rect x="3" y="4" width="7" height="24" rx="3" fill="#92640a"/>
+            <path d="M14 10h11M14 16h11M14 22h7" stroke="#FBF7EE" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__name">Sauda<span class="brand__book">Book</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#problem">The problem</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#preview">Preview</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20SaudaBook" class="btn btn--sm">Book a discovery call</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">The broker's deal book</p>
+          <h1 class="hero__title" id="hero-title">Every buyer,<br /><span class="accent-word">scored to every flat.</span></h1>
+          <p class="hero__pain">
+            A broker's edge is memory — who wants what, which listing fits whose
+            budget, who to call back before they drift to another agent. SaudaBook
+            scores every buyer against every listing, lines up the site visits, and
+            never lets a follow-up slip.
+          </p>
+          <div class="hero__cta">
+            <a href="#pricing" class="btn btn--lg">See your hot matches &rarr;</a>
+            <a href="#how" class="btn-link">See how it works</a>
+          </div>
+          <p class="hero__note"><span class="dot"></span>For solo brokers &amp; small agencies · 10–100 listings · subscription · pricing on discovery</p>
+        </div>
+
+        <!-- SIGNATURE WIDGET: live match card -->
+        <aside class="matchcard" aria-label="Live buyer match demo">
+          <div class="matchcard__head">
+            <div>
+              <p class="matchcard__label">Ranked matches for</p>
+              <p class="matchcard__buyer" id="mc-buyer">Anil Deshmukh</p>
+              <p class="matchcard__req" id="mc-req">Wants 3BHK flat · Whitefield · up to ₹1.30 Cr</p>
+            </div>
+            <span class="matchcard__pill">Live score</span>
+          </div>
+          <ul class="matchcard__rows" id="mc-rows">
+            <li class="match-row" data-tier="hot">
+              <span class="match-row__name">Whitefield 3BHK · ₹1.25 Cr</span>
+              <span class="match-row__meta">Within budget · in preferred area · 3BHK exact</span>
+              <span class="match-row__score" id="mc-live-score">100</span>
+            </li>
+            <li class="match-row" data-tier="warm">
+              <span class="match-row__name">Whitefield 2BHK · ₹88 L</span>
+              <span class="match-row__meta">Within budget · same area · 2BHK (wants 3)</span>
+              <span class="match-row__score">85</span>
+            </li>
+            <li class="match-row" data-tier="cold">
+              <span class="match-row__name">HSR Layout 2BHK · ₹98 L</span>
+              <span class="match-row__meta">Same city · 2BHK · different area</span>
+              <span class="match-row__score">72</span>
+            </li>
+          </ul>
+          <div class="matchcard__foot">
+            <div class="matchstat">
+              <span class="matchstat__label">Hot matches</span>
+              <span class="matchstat__val matchstat__val--hot" id="mc-hot">3</span>
+            </div>
+            <div class="matchstat">
+              <span class="matchstat__label">Follow-ups due</span>
+              <span class="matchstat__val matchstat__val--due" id="mc-due">2</span>
+            </div>
+          </div>
+          <p class="matchcard__caption" id="mc-caption">Top match scores 100 → schedule the site visit → confirmation queued.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section" id="problem" aria-label="The problem">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">01 · The problem</p>
+        <div class="two-col">
+          <h2 class="section__title">You hold the deals.<br />Your memory holds the deal book.</h2>
+          <div class="prose">
+            <p>
+              A property broker juggling <strong>fifty listings and a live pipeline of
+              buyers</strong> runs the whole business from a notebook and a hundred
+              WhatsApp chats. The matching and the chasing are the job — and both are
+              done from memory. That's exactly where deals leak.
+            </p>
+          </div>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🧠</span>
+            <h3>Matching lives in your head</h3>
+            <p>A new 3BHK in Whitefield comes in and you try to recall which of forty buyers wanted exactly that, in budget. Some fits never surface — and the buyer books elsewhere.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">📵</span>
+            <h3>The best buyer goes cold</h3>
+            <p>You meant to call Rohit back with the rental-yield sheet three days ago. It's buried under new WhatsApp messages, and by the time you remember, he's talking to another agent.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">📒</span>
+            <h3>The notebook can't rank</h3>
+            <p>Even when it's all written down, a diary can't tell you that Anil at 100 beats Meena at 72. You reread pages instead of seeing your day's hottest deals at a glance.</p>
+          </div>
+          <div class="pain">
+            <span class="pain__i" aria-hidden="true">🗓️</span>
+            <h3>Site visits become a guessing game</h3>
+            <p>Which visits are lined up this week, who's already viewed, who's still just a lead? Without a pipeline you rediscover it every morning — and drop the ball on someone ready to close.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSIGHT ============ -->
+    <section class="insight" id="insight" aria-label="The insight">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--light">02 · The insight</p>
+        <blockquote class="insight__quote">
+          A broker's whole edge is knowing <span class="hl">which buyer fits which
+          flat</span> — and calling them back <span class="hl">first</span>. Both are
+          rules, not magic.
+        </blockquote>
+        <p class="insight__punch">
+          SaudaBook's whole job is to turn that judgement into something the app runs
+          for you: <strong>score every buyer against every listing, surface the hot
+          matches, and put the follow-ups due today at the top</strong> — so the
+          matching and the chasing happen whether or not you remembered them.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how" aria-label="How it works">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">03 · How it works</p>
+        <h2 class="section__title">List it once. The deal book does the matching.</h2>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__n">1</span>
+            <div>
+              <h3>Add listings and buyers</h3>
+              <p>Enter each property — type, deal, area, city, BHK, size, price — and each buyer's requirement and budget. That's the whole setup; the notebook goes in once.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">2</span>
+            <div>
+              <h3>Every buyer is auto-scored</h3>
+              <p>SaudaBook scores each buyer against each available listing 0–100 on type, budget fit, area, deal and BHK — with the reasons spelled out. Pairs at 70+ surface as hot matches.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">3</span>
+            <div>
+              <h3>Schedule the site visit</h3>
+              <p>From any match, book a site visit. The buyer gets a WhatsApp confirmation with the address and asking price, staged in your outbox — ready to send from your number.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__n">4</span>
+            <div>
+              <h3>Chase follow-ups, watch the pipeline</h3>
+              <p>Log dated follow-ups; overdue ones light up on the dashboard. One click nudges every buyer due today, and the deal moves leads → visits → visited → closed.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section--tint" id="features" aria-label="What's inside">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">04 · What's inside</p>
+        <h2 class="section__title">The whole deal desk, in one book.</h2>
+
+        <div class="feat-grid">
+          <article class="feat">
+            <h3>0–100 match scoring</h3>
+            <p>Every buyer scored against every listing on property type, budget fit, area, deal and BHK — the biggest lever is budget, and the maths is the same every time.</p>
+          </article>
+          <article class="feat">
+            <h3>Hot matches, with reasons</h3>
+            <p>Pairs scoring 70+ surface as hot, each showing why — "Within budget", "In preferred area Whitefield", "3BHK exact" — so you trust the ranking, not just the number.</p>
+          </article>
+          <article class="feat">
+            <h3>Site-visit scheduling</h3>
+            <p>Book a visit straight off a match. A confirmation with the address and asking price is drafted to your outbox — send it from your own number with a tap.</p>
+          </article>
+          <article class="feat">
+            <h3>Follow-ups that don't slip</h3>
+            <p>Dated follow-ups per buyer; overdue ones light up. One click queues a nudge to everyone due today, and re-running never double-sends.</p>
+          </article>
+          <article class="feat">
+            <h3>Deal pipeline by stage</h3>
+            <p>Leads → visits planned → visited → closed. See exactly where every buyer sits, and which listings are available, under offer or sold.</p>
+          </article>
+          <article class="feat">
+            <h3>Rupee-native, offline</h3>
+            <p>Prices in ₹ with Indian grouping and lakh/crore short form. A single app with a real database — no CDNs, no accounts, works without a connection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT PREVIEW ============ -->
+    <section class="section" id="preview" aria-label="The dashboard">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">05 · The dashboard</p>
+        <h2 class="section__title">Open it in the morning. See the deals worth chasing.</h2>
+
+        <div class="screen" role="img" aria-label="SaudaBook dashboard preview showing 4 hot matches, 3 site visits lined up, 3 follow-ups due, a deal pipeline of 8 leads, 3 visits planned, 2 visited and 1 closed, and a table of the day's hottest buyer-listing matches.">
+          <!-- browser chrome -->
+          <div class="screen__bar">
+            <span class="screen__dot"></span><span class="screen__dot"></span><span class="screen__dot"></span>
+            <span class="screen__url">localhost:8133 / dashboard</span>
+          </div>
+
+          <div class="screen__body">
+            <div class="screen__topline">
+              <div>
+                <p class="screen__hello">Namaste, broker</p>
+                <p class="screen__sub">Bengaluru &amp; Pune desk · 10 listings · 8 buyers · 19 Jul 2026</p>
+              </div>
+              <span class="screen__tag">Matches recomputed &middot; just now</span>
+            </div>
+
+            <!-- KPI cards -->
+            <div class="kpis">
+              <div class="kpi kpi--hot">
+                <p class="kpi__label">Hot matches</p>
+                <p class="kpi__val">4</p>
+                <p class="kpi__meta">scoring 70+ today</p>
+              </div>
+              <div class="kpi kpi--visit">
+                <p class="kpi__label">Visits lined up</p>
+                <p class="kpi__val">3</p>
+                <p class="kpi__meta">next: tomorrow 11am</p>
+              </div>
+              <div class="kpi kpi--due">
+                <p class="kpi__label">Follow-ups due</p>
+                <p class="kpi__val">3</p>
+                <p class="kpi__meta">2 overdue · nudge ready</p>
+              </div>
+              <div class="kpi kpi--flat">
+                <p class="kpi__label">Listings live</p>
+                <p class="kpi__val">9</p>
+                <p class="kpi__meta">1 under offer</p>
+              </div>
+            </div>
+
+            <!-- pipeline strip -->
+            <div class="pipe">
+              <div class="pipe__stage"><span class="pipe__n">8</span><p class="pipe__label">Leads</p></div>
+              <div class="pipe__stage"><span class="pipe__n">3</span><p class="pipe__label">Visits planned</p></div>
+              <div class="pipe__stage"><span class="pipe__n">2</span><p class="pipe__label">Visited</p></div>
+              <div class="pipe__stage pipe__stage--closed"><span class="pipe__n">1</span><p class="pipe__label">Closed</p></div>
+            </div>
+
+            <!-- hot matches table -->
+            <div class="tablecard">
+              <div class="tablecard__head">
+                <p>Hot matches &amp; follow-ups</p>
+                <span class="tablecard__hint">ranked by score</span>
+              </div>
+              <div class="tablescroll">
+                <table class="dtable">
+                  <thead>
+                    <tr>
+                      <th>Buyer</th><th>Best listing</th><th class="num">Ask</th><th class="num">Score</th><th>Next action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Anil Deshmukh</td><td>Whitefield 3BHK</td>
+                      <td class="num">₹1.25 Cr</td><td class="num"><span class="score-badge score-badge--hot">100</span></td>
+                      <td><span class="s s--due">Visit tomorrow</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sanjay Patil</td><td>Baner 3BHK, Pune</td>
+                      <td class="num">₹1.12 Cr</td><td class="num"><span class="score-badge score-badge--hot">100</span></td>
+                      <td><span class="s s--due">Under offer · wait</span></td>
+                    </tr>
+                    <tr>
+                      <td>Girish Hegde</td><td>Sarjapur plot</td>
+                      <td class="num">₹96 L</td><td class="num"><span class="score-badge score-badge--hot">100</span></td>
+                      <td><span class="s s--due">Visit in 3 days</span></td>
+                    </tr>
+                    <tr>
+                      <td>Rohit Sharma</td><td>Whitefield 2BHK</td>
+                      <td class="num">₹88 L</td><td class="num"><span class="score-badge score-badge--warm">92</span></td>
+                      <td><span class="s s--over">Follow-up 3 days overdue</span></td>
+                    </tr>
+                    <tr>
+                      <td>Meena Iyer</td><td>HSR Layout 2BHK</td>
+                      <td class="num">₹98 L</td><td class="num"><span class="score-badge score-badge--warm">78</span></td>
+                      <td><span class="s s--hot">Visited · negotiating</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--tint" id="pricing" aria-label="Pricing">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">06 · Pricing</p>
+        <div class="price-wrap">
+          <div class="price-copy">
+            <h2 class="section__title">Simple subscription. However many listings you run.</h2>
+            <p class="prose">
+              If SaudaBook closes <strong>one deal a quarter</strong> that would
+              otherwise have drifted to another agent, it has paid for itself many
+              times over — and you've bought back the hours you spend matching and
+              chasing from memory.
+            </p>
+            <ul class="price-includes">
+              <li>Unlimited listings &amp; buyers</li>
+              <li>0–100 match scoring with reasons</li>
+              <li>Site-visit scheduling + WhatsApp confirmations</li>
+              <li>Follow-up nudges &amp; a deal pipeline by stage</li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <p class="price-card__eyebrow">SaudaBook</p>
+            <p class="price-card__amt">Pricing — on discovery</p>
+            <p class="price-card__line">Subscription basis</p>
+            <p class="prose" style="color:color-mix(in srgb, var(--paper) 82%, transparent);margin:0 0 22px;">
+              We set pricing on a short discovery call and bill it as a simple monthly
+              subscription — sized to how many listings you run. Early brokers get founder terms.
+            </p>
+            <a href="mailto:sreeni.nintendo@gmail.com?subject=Discovery%20call%20—%20SaudaBook" class="btn btn--lg btn--block">Book a discovery call</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO + FAQ ============ -->
+    <section class="section" id="faq" aria-label="Who it's for and frequently asked questions">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--rule">07 · Who it's for &amp; questions</p>
+        <div class="who-grid">
+          <div class="who">
+            <h2 class="section__title section__title--sm">Built for the working broker, not the enterprise CRM.</h2>
+            <p class="prose">
+              SaudaBook is for the <strong>solo broker or small agency</strong> juggling
+              10–100 listings and a live pipeline of buyers — big enough that matching
+              from memory drops deals, small enough that a heavyweight real-estate CRM
+              is overkill and overpriced. If you're running it on a notebook and WhatsApp
+              today, this is for you.
+            </p>
+            <div class="who-tags">
+              <span>Solo property brokers</span>
+              <span>Small agencies</span>
+              <span>Resale &amp; rental agents</span>
+              <span>10–100 listings</span>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details open>
+              <summary>How does the match score actually work?</summary>
+              <p>Every buyer is scored against every available listing on a 0–100 scale: property type, budget fit, area or city, deal type and BHK each carry a weight, with budget the biggest lever. Each match shows its reasons — "Within budget", "In preferred area Whitefield", "3BHK exact" — and pairs scoring 70 or more surface as hot matches on your dashboard.</p>
+            </details>
+            <details>
+              <summary>Does it send the WhatsApp messages, or just remind me to?</summary>
+              <p>SaudaBook drafts each visit confirmation and follow-up nudge — with the buyer's name, the address and the asking price — and stages it in your outbox. You send from your own number with a tap, so it always looks like it came from you. Re-running the nudge never double-sends the same message.</p>
+            </details>
+            <details>
+              <summary>I already have my listings in a notebook and WhatsApp. Is setup painful?</summary>
+              <p>An evening. You add each listing once (type, area, city, BHK, size, price) and each buyer's requirement once. From then on the scoring, hot matches and pipeline are computed for you — you stop re-matching from memory every time a new flat comes in.</p>
+            </details>
+            <details>
+              <summary>What does it cost?</summary>
+              <p>Pricing is worked out on a quick discovery call and billed monthly on subscription. We're keeping public prices off the page while we onboard our first brokers.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <span class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" role="img" aria-label="SaudaBook logo">
+              <rect x="3" y="4" width="26" height="24" rx="3" fill="#ca8a04"/>
+              <rect x="3" y="4" width="7" height="24" rx="3" fill="#92640a"/>
+              <path d="M14 10h11M14 16h11M14 22h7" stroke="#FBF7EE" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand__name">Sauda<span class="brand__book">Book</span></span>
+        </span>
+        <p class="footer__tag">Every buyer, scored to every flat.</p>
+      </div>
+      <div class="footer__meta">
+        <p class="footer__studio">A <strong>KARYA</strong> studio build</p>
+        <a class="footer__mail" href="mailto:sreeni.nintendo@gmail.com">sreeni.nintendo@gmail.com</a>
+        <p class="footer__fine">© 2026 SaudaBook · Made in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

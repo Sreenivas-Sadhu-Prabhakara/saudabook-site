@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="SaudaBook — every buyer, scored to every flat. A KARYA studio build.">
+  <title>SaudaBook — every buyer, scored to every flat</title>
+
+  <!-- deal-book paper base -->
+  <rect width="1200" height="630" fill="#FBF7EE"/>
+
+  <!-- faint ledger rules -->
+  <g stroke="#E9DFC7" stroke-width="2">
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="230" x2="1200" y2="230"/>
+    <line x1="0" y1="310" x2="1200" y2="310"/>
+    <line x1="0" y1="390" x2="1200" y2="390"/>
+    <line x1="0" y1="470" x2="1200" y2="470"/>
+  </g>
+
+  <!-- amber accent band down the left, like a deal-book margin -->
+  <rect x="0" y="0" width="18" height="630" fill="#ca8a04"/>
+  <rect x="90" y="0" width="2" height="630" fill="#F1E6C8"/>
+
+  <!-- logo mark -->
+  <g transform="translate(96,74)">
+    <rect x="0" y="0" width="72" height="66" rx="8" fill="#ca8a04"/>
+    <rect x="0" y="0" width="19" height="66" rx="8" fill="#92640a"/>
+    <path d="M32 22h30M32 36h30M32 50h20" stroke="#FBF7EE" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- brand name -->
+  <text x="188" y="127" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="-1">
+    <tspan fill="#1C1608">Sauda</tspan><tspan fill="#ca8a04">Book</tspan>
+  </text>
+
+  <!-- headline -->
+  <text x="96" y="300" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#1C1608">Every buyer,</text>
+  <text x="96" y="404" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-3" fill="#ca8a04">scored to every flat.</text>
+
+  <!-- tagline -->
+  <text x="98" y="478" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="31" font-weight="500" fill="#574F3C">Match scoring, site visits &amp; follow-ups — a deal book for property brokers.</text>
+
+  <!-- footer row: KARYA wordmark + subscription note -->
+  <g transform="translate(96,556)">
+    <rect x="0" y="-26" width="150" height="42" rx="21" fill="#ca8a04"/>
+    <text x="75" y="2" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3" fill="#FBF7EE">KARYA</text>
+    <text x="172" y="1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" fill="#574F3C">studio build · subscription · pricing on discovery</text>
+  </g>
+
+  <!-- mini match chip, top-right, echoing the product -->
+  <g transform="translate(792,96)">
+    <rect x="0" y="0" width="312" height="200" rx="16" fill="#FFFFFF" stroke="#D9CBA6" stroke-width="2"/>
+    <text x="24" y="42" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#1C1608">Ranked matches</text>
+    <rect x="222" y="24" width="70" height="26" rx="13" fill="#F1E6C8"/>
+    <text x="257" y="42" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#92640a">Score</text>
+
+    <text x="24" y="92" font-family="-apple-system, sans-serif" font-size="17" fill="#574F3C">Whitefield 3BHK</text>
+    <rect x="236" y="74" width="56" height="26" rx="8" fill="#DCF0E1"/>
+    <text x="264" y="92" text-anchor="middle" font-family="'SF Mono', Menlo, monospace" font-size="15" font-weight="800" fill="#15803D">100</text>
+
+    <text x="24" y="132" font-family="-apple-system, sans-serif" font-size="17" fill="#574F3C">Whitefield 2BHK</text>
+    <rect x="236" y="114" width="56" height="26" rx="8" fill="#F1E6C8"/>
+    <text x="264" y="132" text-anchor="middle" font-family="'SF Mono', Menlo, monospace" font-size="15" font-weight="800" fill="#92640a">85</text>
+
+    <line x1="24" y1="156" x2="288" y2="156" stroke="#E9DFC7" stroke-width="2"/>
+    <text x="24" y="182" font-family="-apple-system, sans-serif" font-size="14" fill="#574F3C">Hot matches</text>
+    <text x="288" y="182" text-anchor="end" font-family="'SF Mono', Menlo, monospace" font-size="16" font-weight="700" fill="#15803D">4 today</text>
+  </g>
+</svg>
